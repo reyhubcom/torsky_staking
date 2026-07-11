@@ -24,10 +24,10 @@ export const headerData = {
       ],
     },
     {
-      text: 'Pages',
+      text: 'Product',
       links: [
         {
-          text: 'Features (Anchor Link)',
+          text: 'Liquidity',
           href: getPermalink('/#features'),
         },
         {
@@ -123,7 +123,7 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
+        { text: 'Liquidity', href: '#' },
         { text: 'Security', href: '#' },
         { text: 'Team', href: '#' },
         { text: 'Enterprise', href: '#' },
@@ -177,6 +177,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    Made by <a class="text-blue-700 underline dark:text-muted" href="#"> Rey</a> · 2026 TORSKY.XYZ All Rights Reserved.
   `,
 };
