@@ -3,22 +3,22 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Staking',
+      text: 'Homes',
       links: [
         {
-          text: 'Bitcoin Staking',
+          text: 'SaaS',
           href: getPermalink('/homes/saas'),
         },
         {
-          text: 'Stake [ ETH ]',
+          text: 'Startup',
           href: getPermalink('/homes/startup'),
         },
         {
-          text: 'Stake [ SOL ]',
+          text: 'Mobile App',
           href: getPermalink('/homes/mobile-app'),
         },
         {
-          text: 'Stake [ MON ]',
+          text: 'Personal',
           href: getPermalink('/homes/personal'),
         },
       ],
@@ -115,7 +115,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'EXCHANGE', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
