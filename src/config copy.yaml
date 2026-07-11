@@ -1,6 +1,6 @@
 site:
-  name: TORSKY.xyx
-  site: 'https://torsky.xyz'
+  name: AstroWind
+  site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: TORSKY.xyz
-    template: 'TORSKY'
-  description: "Non-custodial staking providers allow you to earn yield on your Proof-of-Stake (PoS) cryptocurrencies while you maintain 100% control over your private keys. Unlike centralized exchanges (like Coinbase or Binance), these services cannot freeze, mismanage, or lose your funds."
+    default: AstroWind
+    template: '%s — AstroWind'
+  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: TORSKY.xyz
+    site_name: AstroWind
     images:
       - url: '~/assets/images/default.png'
         width: 1200
