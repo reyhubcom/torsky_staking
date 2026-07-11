@@ -28,7 +28,7 @@ export const headerData = {
       links: [
         {
           text: 'Liquidity',
-          href: getPermalink('/#features'),
+          href: getPermalink('/home/liquidity'),
         },
         {
           text: 'Services',
