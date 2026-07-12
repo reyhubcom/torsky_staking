@@ -1,0 +1,278 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Liquidity Pool',
+};
+---
+
+<Layout metadata={metadata}>
+ <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6a50d8c6033ecd05221a3d40&product=sop' async='async'></script>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Blog', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/arthelokyo' },
+      ]}
+      actions={[
+        {
+          text: 'EXCHANGE',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Liquidity Pool"
+    tagline=""
+    
+    actions={[
+      {
+        variant: 'primary',
+        text: 'LIQUIDITY',
+        href: '#',
+        target: '',
+        icon: 'tabler:steam',
+      },
+      {
+        text: '',
+        text: 'BUY.Wallet',
+        href: '#',
+        target: '',
+        icon: 'tabler:droplet-half',
+      },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      A crypto liquidity pool is a crowdsourced collection of digital assets locked in a smart contract to facilitate decentralized trading. Instead of matching buyers and sellers via traditional order books, it enables instant, automated token swaps by relying on mathematical pricing formulas.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:droplet-half',
+        callToAction: {
+          target: '_blank',
+          text: 'Liquidity',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:steam',
+        callToAction: {
+          target: '_blank',
+          text: 'Stake NOW',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:wallet',
+        callToAction: {
+          target: '_blank',
+          text: 'BUY Wallet',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://i.postimg.cc/jjjCFktN/liquidity.png',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#0693e3" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="30" ></div>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What is Liquidity Pool?</h2>
+      <p>
+        A liquidity pool is a crowdsourced collection of digital assets locked in a smart contract to facilitate decentralized trading. Instead of relying on traditional buyers and sellers matching at specific prices, traders swap tokens instantly against the pooled funds, with prices automatically adjusted by mathematical formulas.
+      </p>
+      <br />
+      <p>
+        How They Work
+      </p>
+      <br />
+      <p>Liquidity pools form the backbone of Decentralized Finance (DeFi). They primarily rely on two key components:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="How They Work"
+    items={[
+      {
+        title:
+          'Liquidity Providers (LPs): ',
+        description: `Everyday users lock their cryptocurrencies into a smart contract, usually in equal value pairs (e.g., 50%  . ETH and 50%  USDC) to create a market for that specific token pair.`,
+        icon: 'tabler:circle-dashed-check',
+      },
+      {
+        title:
+          'Automated Market Makers (AMMs): ',
+        description: `nstead of using a human broker, AMM algorithms manage the price of the assets based on their ratio inside the pool. If a trader buys ETH from an ETH/USDC pool, the supply of ETH drops, causing its price to increase automatically to keep the pool balanced.`,
+        icon: 'tabler:brand-walmart',
+      },
+      {
+        title:
+          'LP Tokens: ',
+        description: `In exchange for providing capital, LPs are issued "LP tokens" that represent their fractional ownership of the pool.`,
+        icon: 'tabler:clock-bitcoin',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  
+
+  
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="Benefits & Risks"
+    subtitle="For a quick, visual guide on exactly how liquidity pools work and how providers earn their fees:"
+    isReversed
+    items={[
+      {
+        title: 'Passive Income:',
+        description:
+          ' LPs receive a proportional share of the trading fees generated by the platform. Users can also stake these LP tokens in other platforms for "yield farming" incentives.',
+      },
+      {
+        title: 'Impermanent Loss:',
+        description:
+          ' This is a major risk for liquidity providers. If the price ratio of the two deposited tokens diverges significantly from when they were deposited, the LP may suffer a financial loss compared to simply holding the tokens in their wallet.',
+      },
+      {
+        title: 'Smart Contract Vulnerabilities:',
+        description:
+          '  Because liquidity pools are managed entirely by code, any bugs or exploits in the smart contract can result in a loss of deposited funds.',
+      },
+    ]}
+    image={{
+      src: 'https://i.postimg.cc/6pjwGBwV/pasive.png',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        How do liquidity pools work? <br /><span class="text-2xl">Liquidity providers (LPs)</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Ethereum',
+        job: 'Creative director',
+        image: {
+          src: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Solana',
+        job: 'CEO',
+        image: {
+          src: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Binance',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://cryptologos.cc/logos/bnb-bnb-logo.png',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Avalanche',
+        job: 'Director of web services',
+        image: {
+          src: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+          alt: 'Alex Foster Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Polygon',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Jessica Collins Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
+      },
+    ]}
+  />
+
+  
+
+ <script>
+  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+
+  ChannelIO('boot', {
+    "pluginKey": "aaf5fdca-a626-4b78-b14f-b26abc0da15b"
+  });
+</script>
+</Layout>
