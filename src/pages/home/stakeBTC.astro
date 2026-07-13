@@ -205,7 +205,9 @@ const metadata = {
   
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  
+   <Content
+    id="network"
     title="Leading Non-Custodial Staking Platforms"
     subtitle="The list below breaks down the top decentralized protocols and structural choices for retail and institutional stakers:"
     testimonials={[
@@ -292,6 +294,10 @@ const metadata = {
       },
     ]}
   />
+   <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   
 
