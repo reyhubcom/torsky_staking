@@ -45,7 +45,23 @@ const metadata = {
     id="hero"
     title="What is Monad?"
     tagline=""
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Stake NOW',
+        href: '#',
+        target: '',
+        icon: 'tabler:steam',
+      },
+      {
+        text: '',
+        text: 'BUY.Wallet',
+        href: '#',
+        target: '',
+        icon: 'tabler:droplet-half',
+      },
+    ]}
   >
     <Fragment slot="subtitle">
       Monad is a blockchain platform crafted as an Ethereum Virtual Machine (EVM)-compatible Layer 1 scaling solution. It provides complete compatibility with the EVM, enabling users and developers to interact with existing applications within the Ethereum ecosystem effortlessly. Monad is built with a strong emphasis on scalability and decentralization, capable of processing up to 10,000 transactions per second.
