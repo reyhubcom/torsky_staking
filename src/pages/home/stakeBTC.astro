@@ -10,14 +10,6 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
-const appStoreImg = '~/assets/images/btc-store.png';
-const appStoreDownloadLink = '/stake/BTC';
-
-const exchangeStoreImg = '~/assets/images/exchange-store.png';
-const exchangeStoreDownloadLink = '/home/exchange';
-
-const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = '/home/BUY';
 
 const metadata = {
   title: 'TORSKY.xyz | Trusted Blockchain Validator',
@@ -78,53 +70,59 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-   <div slot="actions" class="flex max-w-lg gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={340} format="webp" />
-      </Button>
-
-      <Button variant="link" href={exchangeStoreDownloadLink}>
-        <Image src={exchangeStoreImg} alt="Exchange Store Image" width={340} format="webp" />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={340} format="webp" />
-      </Button>
-    </div>
-   <Features3
-    id="features"
-    title="What is Crypto Staking?"
-    subtitle="‍
-
-Crypto staking is the process of locking up specific cryptocurrencies in a digital wallet to help verify transactions and secure a blockchain network. In exchange for temporarily locking their assets, stakers are rewarded with newly minted coins or tokens, functioning similarly to earning interest in a traditional savings account."
-    tagline=""
-    
-   
-  />
-
-   <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="Multiple Networks"
-
+  <Content
+    id="stake"
+    columns={3}
+    items={[
       {
-        testimonial: `Receive rewards on your Bitcoin holdings without selling, bridging or swapping to wBTC.`,
-        name: 'Bitcoin',
-        job: 'Diversify and Earn',
-        image: {
-          src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
-          alt: 'Cary Kennedy Image',
+        icon: 'tabler:steam',
+        callToAction: {
+          target: '',
+          text: 'Stake MON',
+          href: '#',
         },
       },
       {
-        testimonial: `Bring new opportunities by enabling your users to earn staking rewards.`,
-        name: 'Ethereum',
-        job: 'Diversify and Earn',
-        image: {
-          src: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
-          alt: 'Josh Wilkinson Image',
+        icon: 'tabler:building-bridge',
+        callToAction: {
+          target: '',
+          text: 'Bridge',
+          href: '#',
         },
       },
+      {
+        icon: 'tabler:wallet',
+        callToAction: {
+          target: '',
+          text: 'BUY Wallet',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://i.postimg.cc/L8Z4QrTv/mon.png',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#0693e3" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="30" ></div>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What is Staking?</h2>
+      <p>
+      Proof-of-Stake protocols use staking to create consensus. By locking native tokens into a validator - or indexers on Monad blockchain -, you earn the right to secure a chain and earn rewards on your stake. Due to its environmental efficiency, staking has overtaken mining and is used far more often in newer protocols. 
+      </p>
+      <br />
+      <p>
+       How it Works.
+      </p>
+      <br />
+      <p> By locking a protocol’s native tokens to give “validators” the right to secure a chain. Validators propose new blocks or attest other validators’ blocks, gaining rewards for doing so.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Steps Widget ****************** -->
 
