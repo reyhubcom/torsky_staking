@@ -1,0 +1,435 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'TORSKY.xyz | Trusted Blockchain Validator',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'Stake', href: '#stake' },
+        { text: 'Rewards', href: '#rewards' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Blog', href: '#blog' },
+        { text: 'Stake BNB', href: '/home/stakeBNB' },
+      ]}
+      actions={[
+        {
+          text: 'EXCHANGE',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="What is Monad?"
+    tagline=""
+    
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Stake NOW',
+        href: '#',
+        target: '',
+        icon: 'tabler:steam',
+      },
+      {
+        text: '',
+        text: 'BUY.Wallet',
+        href: '#',
+        target: '',
+        icon: 'tabler:wallet',
+      },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      Monad is a blockchain platform crafted as an Ethereum Virtual Machine (EVM)-compatible Layer 1 scaling solution. It provides complete compatibility with the EVM, enabling users and developers to interact with existing applications within the Ethereum ecosystem effortlessly. Monad is built with a strong emphasis on scalability and decentralization, capable of processing up to 10,000 transactions per second.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="stake"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:steam',
+        callToAction: {
+          target: '',
+          text: 'Stake MON',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:building-bridge',
+        callToAction: {
+          target: '',
+          text: 'Bridge',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:wallet',
+        callToAction: {
+          target: '',
+          text: 'BUY Wallet',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://i.postimg.cc/L8Z4QrTv/mon.png',
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#0693e3" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="30" ></div>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What is Staking?</h2>
+      <p>
+      Proof-of-Stake protocols use staking to create consensus. By locking native tokens into a validator - or indexers on Monad blockchain -, you earn the right to secure a chain and earn rewards on your stake. Due to its environmental efficiency, staking has overtaken mining and is used far more often in newer protocols. 
+      </p>
+      <br />
+      <p>
+       How it Works.
+      </p>
+      <br />
+      <p> By locking a protocol’s native tokens to give “validators” the right to secure a chain. Validators propose new blocks or attest other validators’ blocks, gaining rewards for doing so.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="rewards"
+    title="How Staking Works"
+    items={[
+      {
+        title:
+          'Rewards :<br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+        description: `Validators earn block rewards (25 MON per block) which are distributed to stakers, minus the validator's commission. Priority fees currently go directly to the validators themselves.`,
+        icon: 'tabler:wallet',
+      },
+      {
+        title:
+          'Timing :  <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `staking operates in "epochs". Staking actions (like delegating or compounding) usually become active at the start of the next epoch, which occurs approximately every 5.5 hours.`,
+        icon: 'tabler:settings-2',
+      },
+      {
+        title:
+          'Lock-ups & Unbonding :  <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `Delegating is generally not instantly withdrawable. To unstake, you must initiate an "undelegate" request and typically wait until the end of an epoch.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Compounding :  <br /> <span class="font-normal">XYZ Creative Agency, </span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: ` Native staking does not auto-compound; you must manually claim or call a compound function to add rewards back into your staked balance.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Skills"
+    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Graphic design',
+        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+      },
+      {
+        title: 'Branding and identity',
+        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+      },
+      {
+        title: 'User-centered design',
+        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+      },
+      {
+        title: 'Adobe Creative Suite',
+        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+      },
+      {
+        title: 'Typography',
+        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+      },
+      {
+        title: 'Color theory',
+        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+      },
+      {
+        title: 'Print and digital design',
+        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+      },
+      {
+        title: 'Attention to detail',
+        description: 'Diligent in maintaining precision and quality in all design work.',
+      },
+      {
+        title: 'Adaptability',
+        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="The Mechanics of Staking"
+    subtitle="Staking is built on a consensus mechanism called Proof-of-Stake (PoS). Instead of using massive computers to solve mathematical puzzles (like Bitcoin's Proof-of-Work), PoS networks rely on users who stake their own crypto as a security deposit."
+    isReversed
+    items={[
+      {
+        title: 'Validation: ',
+        description:
+          ' The network randomly selects validators to propose and confirm new blocks of data (transactions) on the blockchain.',
+      },
+      {
+        title: 'Collateral: ',
+        description:
+          ' Your locked crypto acts as collateral; if the validator acts dishonestly or goes offline, they risk losing a portion of their staked assets (a process called "slashing").',
+      },
+      {
+        title: 'Rewards:  ',
+        description:
+          ' If the network confirms the validator performed their duties accurately, they earn a portion of the transaction fees or newly minted tokens.',
+      },
+    ]}
+    image={{
+      src: 'https://i.postimg.cc/tgZmhLK7/meca.png',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Proof-of-Stake (PoS): <br /><span class="text-2xl">Choose Your Staking Method</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+      },
+      {
+        title: 'Role:',
+        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Art and Music Poster Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+      },
+      {
+        title: 'Role:',
+        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Fashion e-commerce Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Emily Martinez',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Laura Simmons',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Alex Foster',
+        job: 'Director of web services',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Alex Foster Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Jessica Collins',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Jessica Collins Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Let's create together"
+    subtitle="Ready to transform your vision into captivating designs?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        href: '/',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>
