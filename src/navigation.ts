@@ -177,6 +177,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-700 underline dark:text-muted" href="#"> Rey</a> · 2026 TORSKY.XYZ All Rights Reserved.
+    Made by <a class="text-blue-700 underline dark:text-muted" href="https://reysky.xyz"> Rey</a> · 2026 TORSKY.XYZ All Rights Reserved.
   `,
 };
