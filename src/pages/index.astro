@@ -1,20 +1,13 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
 const metadata = {
-  title: 'TORSKY.xyz | Best Crypto Staking Service & Validator',
-  ignoreTitleTemplate: true,
+  title: 'TORSKY.xyz | Trusted Blockchain Validator',
 };
 ---
 
@@ -57,7 +50,75 @@ const metadata = {
     </Fragment>
   </Hero>
 
+
+  <Testimonials
+    title=" Explore every market"
+    testimonials={[
+      {
+        testimonial: `Bitcoin is a decentralized digital currency that allows people to send money directly to each other without using banks or governments.`,
+        name: 'Bitcoin',
+        job: 'BTC',
+        image: {
+          src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `Ethereum is a decentralized blockchain network that acts as a global, programmable computer for building applications without central authorities.`,
+        name: 'Ethereum',
+        job: 'ETH',
+        image: {
+          src: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `Solana is a high-performance, Layer-1 blockchain network designed to act as a global, open-source computer for decentralized applications (dApps).`,
+        name: 'Solana',
+        job: 'SOL',
+        image: {
+          src: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Monad is a high-performance, Layer-1 blockchain designed to supercharge the Ethereum Virtual Machine (EVM) using parallel execution.`,
+        name: 'Monad',
+        job: 'MON',
+        image: {
+          src: 'https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/ad09a50e596cdee13988d6648f85dc8e3171ea1c69878ea4d07497d6925126dc.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Avalanche is a high-performance, Layer-1 blockchain platform engineered to provide near-instant transaction finality and massive scalability.`,
+        name: 'Avalanche',
+        job: 'AVAX',
+        image: {
+          src: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Polygon is a decentralized multi-chain ecosystem designed to expand and scale Ethereum. Instead of changing the main Ethereum blockchain.`,
+        name: 'Polygon',
+        job: 'POL',
+        image: {
+          src: 'https://cryptologos.cc/logos/polygon-matic-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '',
+      text: 'More Networks...',
+      href: '/stake/BTC',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
   
+
   <script>
   (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
 
