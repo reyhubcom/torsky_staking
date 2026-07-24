@@ -31,8 +31,8 @@ export const headerData = {
           href: getPermalink('/home/liquidity'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Farming',
+          href: getPermalink('/home/farm'),
         },
         {
           text: 'Pricing',
