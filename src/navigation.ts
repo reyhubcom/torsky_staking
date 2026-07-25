@@ -35,7 +35,7 @@ export const headerData = {
           href: getPermalink('/home/farm'),
         },
         {
-          text: 'Pricing',
+          text: 'Rewards',
           href: getPermalink('/pricing'),
         },
         {
