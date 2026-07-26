@@ -16,9 +16,9 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline=""
-    title="Stake crypto,earn rewards"
-    subtitle="Earn crypto rewards directly in Exodus and manage your portfolio's growth. Simple, easy, automatic.."
+    tagline="Pricing"
+    title="Stellar Pricing for Every Journey"
+    subtitle="Choose the perfect plan that aligns with your cosmic goals."
   />
 
   <!-- Pricing Widget ******************* -->
@@ -30,8 +30,8 @@ const metadata = {
       {
         title: 'basic',
         subtitle: 'Optimal choice for personal use',
-        price: 100,
-        period: 'income per month',
+        price: 29,
+        period: 'per month',
         items: [
           {
             description: 'Etiam in libero, et volutpat',
