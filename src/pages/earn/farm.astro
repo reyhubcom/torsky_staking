@@ -1,0 +1,129 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'TORSKY.xyz | Trusted Blockchain Validator',
+};
+---
+
+<Layout metadata={metadata}>
+  <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6a50d8c6033ecd05221a3d40&product=sop' async='async'></script>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Stake NOW',
+        href: '/home/networks',
+        target: '',
+        icon: 'tabler:steam',
+      },
+      {
+        text: '',
+        text: 'BUY Wallet',
+        href: '/home/BUY',
+        target: '',
+        icon: 'tabler:wallet',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/8f406cee-b6c1-4247-a1d0-81984b9bd8cc/cBvZfZXi8w.lottie" speed="1" style="width: 100%; height: 120px" mode="forward" loop autoplay></dotlottie-wc>
+      <span class="hidden xl:inline"></span>
+      <span class="text-accent dark:text-white"> Staking</span> Provider
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold"> A non-custodial</span> staking provider allows you to earn rewards on your cryptocurrency while maintaining full ownership.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"> </span>
+        and control of your private keys. Unlike custodial options (like centralized exchanges), a non-custodial provider never touches your funds directly, eliminating counterparty and platform insolvency risks.
+    </Fragment>
+  </Hero>
+
+
+  <Testimonials
+    title=" Explore every market"
+    testimonials={[
+      {
+        testimonial: `Bitcoin is a decentralized digital currency that allows people to send money directly to each other without using banks or governments.`,
+        name: 'Bitcoin',
+        job: 'BTC',
+        image: {
+          src: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `Ethereum is a decentralized blockchain network that acts as a global, programmable computer for building applications without central authorities.`,
+        name: 'Ethereum',
+        job: 'ETH',
+        image: {
+          src: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `Solana is a high-performance, Layer-1 blockchain network designed to act as a global, open-source computer for decentralized applications (dApps).`,
+        name: 'Solana',
+        job: 'SOL',
+        image: {
+          src: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Monad is a high-performance, Layer-1 blockchain designed to supercharge the Ethereum Virtual Machine (EVM) using parallel execution.`,
+        name: 'Monad',
+        job: 'MON',
+        image: {
+          src: 'https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/ad09a50e596cdee13988d6648f85dc8e3171ea1c69878ea4d07497d6925126dc.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Avalanche is a high-performance, Layer-1 blockchain platform engineered to provide near-instant transaction finality and massive scalability.`,
+        name: 'Avalanche',
+        job: 'AVAX',
+        image: {
+          src: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+      {
+        testimonial: `Polygon is a decentralized multi-chain ecosystem designed to expand and scale Ethereum. Instead of changing the main Ethereum blockchain.`,
+        name: 'Polygon',
+        job: 'POL',
+        image: {
+          src: 'https://cryptologos.cc/logos/polygon-matic-logo.png',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '',
+      text: 'More Networks...',
+      href: '/stake/BTC',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  
+
+  <script>
+  (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+
+  ChannelIO('boot', {
+    "pluginKey": "aaf5fdca-a626-4b78-b14f-b26abc0da15b"
+  });
+</script>
+</Layout>
