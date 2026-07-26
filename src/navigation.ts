@@ -57,11 +57,11 @@ export const headerData = {
       ],
     },
     {
-      text: 'Landing',
+      text: 'Lending',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Lend Crypto',
+          href: getPermalink('/lending/crypto'),
         },
         {
           text: 'Long-form Sales',
