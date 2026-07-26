@@ -86,11 +86,11 @@ export const headerData = {
       ],
     },
     {
-      text: 'Blog',
+      text: ' Earn',
       links: [
         {
-          text: 'Blog List',
-          href: getBlogPermalink(),
+          text: 'MON Earn',
+          href: getPermalink('/earn/MON'),
         },
         {
           text: 'Article',
