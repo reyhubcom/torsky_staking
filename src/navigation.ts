@@ -36,7 +36,7 @@ export const headerData = {
         },
         {
           text: 'Rewards',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/home/reward'),
         },
         {
           text: 'About us',
