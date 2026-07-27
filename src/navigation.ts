@@ -98,7 +98,7 @@ export const headerData = {
         },
         {
           text: 'SOL Earn',
-           href: getPermalink('/earn/MON'),
+           href: getPermalink('/earn/SOL'),
         },
        
       ],
