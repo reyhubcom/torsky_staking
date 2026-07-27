@@ -93,21 +93,14 @@ export const headerData = {
           href: getPermalink('/earn/MON'),
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          text: 'ETH Earn',
+           href: getPermalink('/earn/MON'),
         },
         {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          text: 'SOL Earn',
+           href: getPermalink('/earn/MON'),
         },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
+       
       ],
     },
     {
