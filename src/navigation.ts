@@ -104,8 +104,8 @@ export const headerData = {
       ],
     },
     {
-      text: 'Stakely',
-      href: 'https://staking.stakely.io/?form=monad_native',
+      text: 'Bridge',
+      href: '/home/bridge',
     },
   ],
   actions: [{ text: 'EXCHANGE', href: '/home/exchange', target: '' }],
