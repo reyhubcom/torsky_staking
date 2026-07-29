@@ -117,7 +117,7 @@ export const footerData = {
       title: 'Product',
       links: [
         { text: 'Liquidity', href: '/home/liquidity' },
-        { text: 'Security', href: '#' },
+        { text: 'Earn', href: '/earn/earn.1' },
         { text: 'Team', href: '#' },
         { text: 'Enterprise', href: '#' },
         { text: 'Customer stories', href: '#' },
