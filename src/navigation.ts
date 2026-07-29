@@ -100,6 +100,14 @@ export const headerData = {
           text: 'SOL Earn',
            href: getPermalink('/earn/SOL'),
         },
+        {
+          text: 'SOL SUI',
+           href: getPermalink('/earn/SUI'),
+        },
+        {
+          text: 'TIA Earn',
+           href: getPermalink('/earn/TIA'),
+        },
        
       ],
     },
